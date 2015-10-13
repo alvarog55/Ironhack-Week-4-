@@ -1,0 +1,31 @@
+<h1> Create a new entry</h1>
+
+<% if @project.errors.messages.present? %>
+  <p><%= @project.errors.messages %></p>
+<%end %>
+
+<%= form_for [@project, @entry] do |f| %>
+	<div>
+    	<%= f.label :minutes %>
+   	 	<%= f.number_field :minutes %>
+	</div>
+  <br>
+	<div>
+    	<%= f.label :hours %>
+  		<%= f.number_field :hours %>
+  	</div>
+    <br>
+    <div>
+      <%= f.label :start_date %>
+      <%= f.date_field :start_date %>
+    </div>
+    <br>
+    <div>
+      <%= f.label :comment %>
+      <%= f.text_area :comment %>
+    </div>
+    <br>
+  	<div>
+  		<%= f.submit "Create Entry" %>
+  	</div>
+<% end %>

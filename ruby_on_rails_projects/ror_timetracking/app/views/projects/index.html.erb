@@ -1,0 +1,15 @@
+<h1> List of Projects:</h1>
+
+<ul>
+	<% @projects.each do |project| %>
+	<li> <%= link_to(project.title, project_path(project.id)) %> 
+	<!-- <a href="http://localhost:3000/projects/<%=project.id%>"> --> Updated at: <%= project.updated_at.strftime("%H:%M") %>
+	<%= link_to "Edit Project", edit_project_path(project) %>
+	<%= link_to "Delete Project", project_path(project), method: :delete, data: {confirm: "Are you sure?"} %>
+	
+</li> 
+	<% end %>
+</ul>
+
+<!-- <a href = "projects/new"> Add New Project </a> -->
+<%= link_to "Create Project", new_project_path %>

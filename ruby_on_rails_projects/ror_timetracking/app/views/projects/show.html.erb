@@ -1,0 +1,14 @@
+<% flash_message %>
+
+<h1><%= @project.title %></h1>
+
+<%= @project.description %>
+
+<% @entries.each do |entry| %>
+	<li><%= "#{entry.project_id}: #{entry.hours} h - #{entry.minutes} m - #{entry.start_date} #{entry.comment}" %>
+		<%= link_to("Edit Entry", edit_entry_path(entry))%> 
+		<%= link_to "Delete", entry_path(entry), method: "DELETE", data: {confirm: "Are you sure?"} %></li>
+<%end%>
+
+<%= link_to "Go To Project List", projects_path %><br>
+<%= link_to "Create Entry", new_project_entry_path(@project) %>
