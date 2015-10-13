@@ -1,0 +1,97 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+html {
+	height: 100%;
+}
+body { 
+	padding-bottom: 70px;
+	height: 100%;
+	background-color: #0007e0;
+}
+.main-row {
+	height: 100%;
+}
+.panel-default > .panel-heading {
+	background-color: #07003d;
+	color: white;
+	text-align: center;
+}
+.contain {
+	
+	height: 100%
+}
+.sidebar {
+	height: 100%;
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+	font-size: 17px;
+}
+.navbar-default {
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+	font-size: 15px;
+	background-color: #07003d;
+	color: white;
+}
+.jumbotron {
+	height: 100%;
+}
+.list-group-item-heading {
+	text-align: center;
+	font-size: 70;
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+
+}
+.list-group-item {
+	background-color: rgba(161, 219, 255, 0.5);
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+	font-size: 17px;
+	border: 0px;
+	
+}
+.panel-primary {
+	background-color: rgba(161, 219, 255, 0.5);
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+	font-size: 17px;
+	border: 0px;
+	text-align: center;
+}
+a {
+	color: #001157;
+}
+.jumbotron h1 {
+	margin-bottom: 0;
+	font-size: 70;
+	color: #9edbff;
+	font-family: "Brush Script MT",cursive;
+
+}
+.main-title {
+	text-align: center;
+	font-size: 70;
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+}
+.navbar-fixed-bottom {
+	text-align: center;
+	font-family: "Rockwell Extra Bold","Rockwell Bold",monospace;
+	font-size: 30px;
+	background-color: #07003d;
+	color: white;
+}
+.panel-body {
+	background-color: #0007e0;
+}

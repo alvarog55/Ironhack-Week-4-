@@ -1,0 +1,33 @@
+<h1 class= "main-title"> Welcome to our Music Concert Network </h1>
+<div class="row main-row">
+	<div class="col-md-2 sidebar">
+  		<div class="panel panel-default">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Later this month</h3>
+  			</div>
+  			<div class="panel-body">
+				<ul class="list-group">
+					<% @concerts_month.each do |concert| %>
+				<li class="list-group-item">
+					<%= link_to(concert.band, concert_path(concert)) %>
+				</li>
+
+					<% end %>
+				</ul>
+  			</div>
+		</div>
+	</div>
+  <div class="col-md-10 contain">
+  	<div class="jumbotron" style="background-image: url(http://www.hercampus.com/sites/default/files/2013/03/20/Concert1_2.jpg); background-size: 100%;">
+  		<h1>Today Concerts</h1>
+  		<ul class="list-group">
+			<% @concerts.each do |concert| %>
+				<li class="list-group-item">
+					<%= link_to(concert.band, concert_path(concert)) %>
+				</li>
+
+			<% end %>
+		</ul>
+  		
+</div></div>
+</div>

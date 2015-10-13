@@ -1,0 +1,3 @@
+class AddressbookController < ApplicationController
+
+end

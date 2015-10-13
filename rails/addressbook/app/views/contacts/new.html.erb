@@ -1,0 +1,28 @@
+<h1> Create a new Contact</h1>
+
+<% if @contact.errors.messages.present? %>
+  <p><%= @contact.errors.messages %></p>
+<%end %>
+
+<%= form_for @contact do |f| %>
+	<div>
+    	<%= f.label :name %>
+   	 	<%= f.text_field :name %>
+	</div>
+	<div>
+    	<%= f.label :address %>
+  		<%= f.text_area :address %>
+  </div>
+  <div>
+      <%= f.label :phone_number %>
+      <%= f.text_area :phone_number %>
+  </div>
+  <div>
+      <%= f.label :email %>
+      <%= f.text_area :email %>
+  </div>
+
+  <div>
+  		<%= f.submit "Create Contact" %>
+  	</div>
+<% end %>

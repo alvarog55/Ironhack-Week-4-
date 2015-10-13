@@ -1,0 +1,19 @@
+<h1> List of Contacts:</h1>
+
+<ul>
+	<% @contacts.each do |contact| %>
+		<li>
+			<a href="http://localhost:3000/contacts/<%=contact.id%>"><%= contact.name%></a>
+		</li>  
+		<%= form_for :contact, url: {action: "favourites"} do |f| %>	
+			<% if contact.favourites.nil?%>
+	 			<%= hidden_field_tag(:parent_id,  contact.id) %>
+	 			<%=f.submit "Add to favourites" %>
+ 			<%end%>
+ 			<%= contact.favourites %></li> 
+		<% end %>
+	<%end%>
+</ul> 
+
+<%= link_to "Add New Contact", contacts_new_path %>
+

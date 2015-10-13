@@ -1,0 +1,52 @@
+
+<% if concert.new_record?%>
+  <%button_name = "Create Concert" %>
+<%else%>
+  <%button_name = "Edit Concert" %>
+<%end%>
+
+<% if concert.errors.messages.present? %>
+  <p><%= concert.errors.messages %></p>
+<%end %>
+<div class="jumbotron">
+  <h1> Add a New Concert</h1>
+  <p><%= form_for concert do |f| %>
+
+  <div>
+      <%= f.label :band %>
+      <%= f.text_field :band %>
+  </div>
+  <br>
+  <div>
+      <%= f.label :venue %>
+      <%= f.text_field :venue%>
+  </div>
+  <br>
+  <div>
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+  </div>
+  <br>
+  <div>
+      <%= f.label :datetime %>
+      <%= f.date_field :datetime %>
+    </div>
+    <br>
+    <div>
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </div>
+    <br>
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <br> 
+    <div>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button"><%= button_name %></a></p>
+    </div>
+<% end %></p>
+  
+</div>
+
+ 

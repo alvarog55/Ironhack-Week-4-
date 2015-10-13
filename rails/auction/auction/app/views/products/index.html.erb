@@ -1,0 +1,13 @@
+<h1> List of Products </h1>
+<%= flash_message %>
+<ul>
+	<% @products.each do |product| %>
+		<li>
+			Product: <%= link_to(product.name, product_path(product)) %>
+			<%= link_to "Delete Product", product_path(product), method: :delete, data: {confirm: "Are you sure?"} %>
+		</li>
+
+	<% end %>
+</ul>
+
+<%= link_to "Create product", new_user_product_path %>

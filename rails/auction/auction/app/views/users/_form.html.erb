@@ -1,0 +1,23 @@
+<% if user.new_record?%>
+  <%button_name = "Create User" %>
+<%else%>
+  <%button_name = "Edit User" %>
+<%end%>
+
+<% if user.errors.messages.present? %>
+  <p><%= user.errors.messages %></p>
+<%end %>
+
+<%= form_for user do |f| %>
+	<div>
+    	<%= f.label :name %>
+   	 	<%= f.text_field :name %>
+	</div>
+	<div>
+    	<%= f.label :email %>
+  		<%= f.text_field :email %>
+  	</div>
+  	<div>
+  		<%= f.submit button_name %>
+  	</div>
+<% end %>

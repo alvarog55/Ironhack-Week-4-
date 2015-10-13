@@ -1,0 +1,12 @@
+<div class="panel panel-primary">
+
+	<h1><%= @concert.band %></h1>
+
+    <p> Venue: <%= @concert.venue %></p>
+    <p> City: <%= @concert.city %></p>
+    <p> Date: <%= @concert.datetime %></p>
+    <p> Price: <%= @concert.price %></p>
+    <p> Description: <%= @concert.description %></p>
+</div>
+<%= link_to "Go To Concerts List", concerts_path %><br>
+

@@ -1,0 +1,17 @@
+
+<%= flash_message %>
+
+<div class="list-group">
+  <a class="list-group-item active">
+    <h4 class="list-group-item-heading">List of Concerts
+    <% @concerts.each do |concert| %>
+			<li>
+			<%= link_to(concert.band, concert_path(concert)) %>
+			</li>
+		<% end %>
+	</h4>
+  </a>
+</div>
+
+
+<%= link_to "Create Concert", new_concert_path %>
